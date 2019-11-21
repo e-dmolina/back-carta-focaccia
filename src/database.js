@@ -13,5 +13,5 @@ mongoose.connect(uri,{
 const connection = mongoose.connection;
 
 connection.once('open', () => {
-    console.log('DB is conected');
+    console.log('DB is connected');
 })

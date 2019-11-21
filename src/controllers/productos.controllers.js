@@ -11,6 +11,26 @@ productosctl.getProductos = async (req, res) => {
     }
 };
 
+productosctl.getProducto = async (req, res) => {
+    try {
+        const respuesta = await ProductoModel.findById(req.params.id);
+        res.json(respuesta);
+    } catch (error) {
+        res.json({ message: error });
+    }
+}
+
+productosctl.getProdXCategoria = async (req, res) => {
+    try {
+        let query = {};
+        query[req.params.key]= req.params.value;
+        const respuesta = await ProductoModel.find(query);
+        res.json(respuesta);
+    } catch (error) {
+        res.json({ message: error });
+    }
+}
+
 productosctl.createProductos = async (req, res) => {
     try {
         const newProducto = new ProductoModel(req.body);
@@ -21,14 +41,6 @@ productosctl.createProductos = async (req, res) => {
     }
 }
 
-productosctl.getProducto = async (req, res) => {
-    try {
-        const respuesta = await ProductoModel.findById(req.params.id);
-        res.json(respuesta);
-    } catch (error) {
-        res.json({ message: error });
-    }
-}
 
 productosctl.updeteProducto = async (req, res) => {
     try {
