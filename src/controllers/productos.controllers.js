@@ -93,6 +93,10 @@ categorias = [
         img: "../../../assets/img/Papas.jpg"
     },
     {
+        nombre: "Picadas",
+        img: "../../../assets/img/Picadas.jpg"
+    },
+    {
         nombre: "Bebidas",
         img: "../../../assets/img/Bebidas.jpg"
     },
