@@ -74,7 +74,7 @@ productosctl.getCategorias = (req, res) => {
 categorias = [
     {
         nombre: "Pizzas",
-        img: "../../../assets/img/Pizzas.jpg"
+        img: "Pizzas.jpg"
     },
     {
         nombre: "Empanadas",
